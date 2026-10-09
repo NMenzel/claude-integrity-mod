@@ -1,0 +1,17 @@
+{
+  "name": "claude-integrity-mod",
+  "metadata": {
+    "description": "Claude Integrity: tells implemented apart from verified in Claude Code. A requirement contract from your own words, fake-completeness detection, evidence from real checks, and an audit of completion claims."
+  },
+  "owner": {
+    "name": "NMenzel",
+    "url": "https://github.com/NMenzel"
+  },
+  "plugins": [
+    {
+      "name": "integrity",
+      "source": "./",
+      "description": "Compares what you asked for, what changed and what evidence proves it. Flags placeholder code, scope drift and completion claims that no passing check supports."
+    }
+  ]
+}

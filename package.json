@@ -1,0 +1,23 @@
+{
+  "name": "integrity",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Claude Integrity: a Claude Code Mod that tells implemented apart from verified.",
+  "license": "MIT",
+  "author": "NMenzel (https://github.com/NMenzel)",
+  "homepage": "https://github.com/NMenzel/claude-integrity-mod",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NMenzel/claude-integrity-mod.git"
+  },
+  "type": "module",
+  "scripts": {
+    "validate": "claude plugin validate .",
+    "test": "claude plugin test .",
+    "typecheck": "tsc -p .",
+    "check": "npm run validate && npm run typecheck && npm test"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}

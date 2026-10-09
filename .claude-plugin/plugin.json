@@ -1,0 +1,102 @@
+{
+  "name": "integrity",
+  "displayName": "Claude Integrity",
+  "version": "0.1.0",
+  "description": "Tells implemented apart from verified: a requirement contract from your own words, a Mirage Detector for fake completeness, evidence from real test/build/lint runs, and an audit of completion claims.",
+  "author": {
+    "name": "NMenzel",
+    "url": "https://github.com/NMenzel"
+  },
+  "homepage": "https://github.com/NMenzel/claude-integrity-mod",
+  "repository": "https://github.com/NMenzel/claude-integrity-mod",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "claude-code-mod",
+    "claude-code-plugin",
+    "verification",
+    "requirements",
+    "code-review",
+    "scope-drift",
+    "tests",
+    "tui"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "notify": {
+      "type": "string",
+      "title": "Notifications",
+      "description": "Integrity hints: off, important (default) or all.",
+      "options": [
+        "off",
+        "important",
+        "all"
+      ],
+      "default": "important"
+    },
+    "statusHint": {
+      "type": "boolean",
+      "title": "Status hint",
+      "description": "Show the one-line integrity status under the prompt.",
+      "default": true
+    },
+    "paneAutoOpen": {
+      "type": "boolean",
+      "title": "Open pane automatically",
+      "description": "Open the Integrity pane at session start (only where it docks as a sidebar).",
+      "default": false
+    },
+    "layout": {
+      "type": "string",
+      "title": "Pane layout",
+      "description": "auto, mini, compact or wide.",
+      "options": [
+        "auto",
+        "mini",
+        "compact",
+        "wide"
+      ],
+      "default": "auto"
+    },
+    "maxFindings": {
+      "type": "number",
+      "title": "Max visible findings",
+      "description": "Findings listed per pane page.",
+      "default": 8,
+      "min": 1,
+      "max": 50
+    },
+    "color": {
+      "type": "boolean",
+      "title": "Color",
+      "description": "Color status glyphs (glyphs always carry the meaning).",
+      "default": true
+    },
+    "autoCapture": {
+      "type": "boolean",
+      "title": "Capture task prompts",
+      "description": "Draft a contract from implementation prompts when no task is active. Never approves it.",
+      "default": true
+    },
+    "retentionDays": {
+      "type": "number",
+      "title": "Retention (days)",
+      "description": "Idle tasks older than this are deleted.",
+      "default": 30,
+      "min": 1,
+      "max": 3650
+    },
+    "gitProvenance": {
+      "type": "boolean",
+      "title": "Git provenance",
+      "description": "Record the git HEAD with each piece of evidence (runs git rev-parse, read-only).",
+      "default": true
+    },
+    "aiAssist": {
+      "type": "boolean",
+      "title": "AI requirement suggestions",
+      "description": "Allow /integrity-suggest to make one model call per request. Off by default.",
+      "default": false
+    }
+  }
+}
